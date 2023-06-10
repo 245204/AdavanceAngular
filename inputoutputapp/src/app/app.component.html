@@ -1,0 +1,23 @@
+<div>
+<h3>Application Form</h3>
+Name of the Applicant:<input type="text" id="name" [(ngModel)]="name">
+Date Of Birth:<input type="number" id="dob" [(ngModel)]="dob">
+Phone Number:<input type="number" id="phone" [(ngModel)]="phone"><br>
+Press to see the details before submitting:
+<button (click)="view()">Show</button><br>
+{{value}}
+<app-form [parentdata1]=parentdata1 [parentdata2]=parentdata2 [parentdata3]=parentdata3 (submitdata)="submitdata($event)"></app-form>
+</div>
+<br>
+
+
+
+<div>
+    <h3>Product Details </h3>
+    ProductId:<input type="number" id="pid" [(ngModel)]="pid">
+   Name of the Product:<input type="text" id="pname" [(ngModel)]="pname">
+   Description:<input type="text" id="pdes" [(ngModel)]="pdes">
+   <button (click)="showtable()">Table</button>{{value1}}
+   <app-product [p1]=p1 [p2]=p2 [p3]=p3   (tabledata)="tabledata($event)"></app-product>
+</div>
+{{value}}

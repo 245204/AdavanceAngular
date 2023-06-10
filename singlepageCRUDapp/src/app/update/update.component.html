@@ -1,0 +1,24 @@
+ <div>
+      <h3>Product Details</h3>
+      <form (submit)="saveUpdatedProduct()"  action="/action_page.php">
+          <div class="form-group">
+        <input type="hidden" [(ngModel)]="product.productId" name="productId">
+        
+        <label for="nameInput">Name:</label>
+        <input class="form-control" type="text" [(ngModel)]="product.name" name="name" required><br>
+
+        <label for="descriptionInput">Description:</label>
+        <input class="form-control" type="text" [(ngModel)]="product.description" name="description" required><br>
+
+        <label for="priceInput">Price:</label>
+        <input class="form-control" type="number" [(ngModel)]="product.price" name="price" required><br>
+
+        <label for="qtyInput">Quantity:</label>
+        <input class="form-control" type="number" [(ngModel)]="product.qty" name="qty" required><br>
+        <button class="btn btn-success" type="submit">Update Product</button>
+     </div>
+      </form>
+
+    </div> 
+  
+  

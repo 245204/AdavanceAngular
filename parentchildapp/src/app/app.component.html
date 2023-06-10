@@ -1,0 +1,12 @@
+<div class="container">
+  <h4>Parent Component</h4>
+  First Data:<input type="text" class="form-control" [(ngModel)]="enterName"/>
+  <input type="button" value="send" (click)="transferData()" class="btn btn-primary">
+  Second Data:<input type="text" [(ngModel)]="give"/>
+  <input type="button" (click)="transferData()" value="send">
+
+<h4>Recived from about ng{{value}}</h4>
+
+ <app-home [parentData]=parentData [showData]=showData></app-home>
+ <app-about (sendData)="sendData($event)"></app-about>
+</div>

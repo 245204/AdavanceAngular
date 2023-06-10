@@ -1,0 +1,12 @@
+<h3>SUBTRACTION</h3>
+Enter value1:<input type="text" [(ngModel)]="num1">&nbsp;
+Enter value2:<input type="text" [(ngModel)]="num2"><br>
+<button (click)="subtract(num1,num2)">Result</button>
+<br>
+Difference is={{result}}
+<div>
+<h3>Parent Component</h3>
+</div>
+<app-add></app-add>
+<app-parent></app-parent>
+<app-child></app-child>
