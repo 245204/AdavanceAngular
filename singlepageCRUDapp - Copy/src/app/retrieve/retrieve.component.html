@@ -1,0 +1,32 @@
+<div>
+    <h2>Current DataBase Of Musicfy</h2>
+    <table border="'2" class="table table-bordered">
+        <thead>
+            <th>MusicId</th>
+            <th>MusicName</th>
+            <th>MusicArtist</th>
+            <th>MusicGenre</th>
+            <th>Year</th>
+            <th>Language</th>
+            <th>Duration</th>
+            <th>Country</th>
+            <th>OverallRate</th>
+            <th>Update/Delete</th>
+        </thead>
+        <tr *ngFor="let admin of admin">
+            <td>{{admin.musicId}}</td>
+            <td>{{admin.musicName}}</td>
+            <td>{{admin.artistName}}</td>
+            <td>{{admin.musicGenre}}</td>
+            <td>{{admin.songReleaseDate}}</td>
+            <td>{{admin.songLanguage}}</td>
+            <td>{{admin.duration}}</td>
+            <td>{{admin.country}}</td>
+            <td>{{admin.overallRate}}</td>
+            <td><a [routerLink]="['/update/',admin.musicId]" class="btn btn-primary">Update</a> 
+                
+                <button *ngIf="admin.musicId !== undefined" (click)="deleteProduct(admin.musicId)" class="btn btn-danger m-1">Delete</button> 
+                 <!-- <router-outlet></router-outlet> -->
+        </tr>
+    </table>
+</div>
